@@ -4,14 +4,14 @@
     <article>
       <h3 class='mac'>Mac</h3>
       <p>Download the latest version of the Mac app.</p>
-      <a href='../../public/demo1.png' download='dmg-demo'>Download</a>
+      <a href='../../public/PlayJs_0.1.0_aarch64.dmg' download='dmg-playjs-silicon'>Download</a>
     </article>
-    <article>
+    <article class="disabled">
       <h3 class='windows'>Windows</h3>
       <p>Download the latest version of the Windows app.</p>
       <a href=''>Download</a>
     </article>
-    <article>
+    <article class="disabled">
       <h3 class='linux'>Linux</h3>
       <p>Download the latest version of the Linux app.</p>
       <a href=''>Download</a>
@@ -101,6 +101,11 @@
     background-color: rgba(255, 255, 255, 0.05);
     transition: all 0.1s ease;
     transform: scale3d(1.02, 1.02, 1);
+  }
+
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 
   @media (max-width: 600px) {
