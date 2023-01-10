@@ -1,9 +1,13 @@
 <nav>
   <main>
     <div>
-      <a class="todownload">Download</a>
-      <a>Contact</a>
-      <a>Contribute</a>
+      <a class='todownload'>Download</a>
+      <a href='https://www.linkedin.com/in/rodrigoalcino/' target='_blank'
+        >Contact</a
+      >
+      <a href='https://github.com/rodriabregu/playjs' target='_blank'
+        >Contribute</a
+      >
     </div>
   </main>
 </nav>
@@ -22,7 +26,7 @@
 
   div {
     display: flex;
-    padding: .6rem;
+    padding: 0.6rem;
     gap: 1rem;
   }
 
@@ -32,28 +36,26 @@
     font-size: 1.6rem;
     font-weight: 300;
     transition: 0.3s;
-    padding: .4rem;
+    padding: 0.4rem;
     border: 1px solid transparent;
     border-radius: 4px;
     line-height: 24px;
     letter-spacing: 2px;
     cursor: pointer;
   }
-  
+
   a:hover {
-    color: #00DFD8;
-    border: 1px solid #007CF0;
+    color: #00dfd8;
+    border: 1px solid #007cf0;
     border-radius: 4px;
   }
 </style>
 
 <script>
-  const buttons = document.querySelectorAll('a.todownload');
+  const buttonDownload = document.querySelector('a.todownload');
   const sectionDownload = document.getElementById('download');
 
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
+  buttonDownload?.addEventListener('click', () => {
       sectionDownload?.scrollIntoView({ behavior: 'smooth' });
     });
-  });
 </script>
