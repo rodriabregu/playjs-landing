@@ -1,9 +1,9 @@
 <nav>
   <main>
     <div>
-      <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Download</a>
-      <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Contact</a>
-      <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Contribute</a>
+      <a class="todownload">Download</a>
+      <a>Contact</a>
+      <a>Contribute</a>
     </div>
   </main>
 </nav>
@@ -22,8 +22,8 @@
 
   div {
     display: flex;
-    gap: 1rem;
     padding: .6rem;
+    gap: 1rem;
   }
 
   a {
@@ -37,6 +37,7 @@
     border-radius: 4px;
     line-height: 24px;
     letter-spacing: 2px;
+    cursor: pointer;
   }
   
   a:hover {
@@ -45,3 +46,14 @@
     border-radius: 4px;
   }
 </style>
+
+<script>
+  const buttons = document.querySelectorAll('a.todownload');
+  const sectionDownload = document.getElementById('download');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      sectionDownload?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>

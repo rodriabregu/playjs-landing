@@ -1,0 +1,111 @@
+<section id='download'>
+  <header>Downloads</header>
+  <div>
+    <article>
+      <h3 class='mac'>Mac</h3>
+      <p>Download the latest version of the Mac app.</p>
+      <a href='../../public/demo1.png' download='dmg-demo'>Download</a>
+    </article>
+    <article>
+      <h3 class='windows'>Windows</h3>
+      <p>Download the latest version of the Windows app.</p>
+      <a href=''>Download</a>
+    </article>
+    <article>
+      <h3 class='linux'>Linux</h3>
+      <p>Download the latest version of the Linux app.</p>
+      <a href=''>Download</a>
+    </article>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  div {
+    max-width: 75ch;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  header {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    border-bottom: 1px solid rgb(121, 155, 236);
+    width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .mac {
+    background-image: -webkit-linear-gradient(0deg, #7928ca 25%, #ff0080 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .windows {
+    background-image: -webkit-linear-gradient(0deg, #007cf0 25%, #00dfd8 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .linux {
+    background-image: -webkit-linear-gradient(0deg, #ff4d4d 25%, #f9cb28 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  article {
+    padding: 0.6rem;
+    border: 1px solid rgb(121, 155, 236);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  article:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: all 0.1s ease;
+    transform: scale3d(1.02, 1.02, 1);
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(121, 155, 236);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.1s ease;
+    transform: scale3d(1.02, 1.02, 1);
+  }
+
+  @media (max-width: 600px) {
+    div {
+      flex-direction: column;
+    }
+  }
+</style>
