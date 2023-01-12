@@ -1,6 +1,6 @@
 ---
-import demo1 from '../../public/demo1.png';
-import demo2 from '../../public/demo2.png';
+import demo1 from '/demo1.png';
+import demo2 from '/demo2.png';
 import Download from './Download.astro';
 import Footer from './Footer.astro';
 ---
@@ -13,14 +13,14 @@ import Footer from './Footer.astro';
         <span>Workflow</span>
         Receive in real time, line by line the result of your code.
       </p>
-      <img src={demo1} alt='descripción de la imagen' />
+      <img src={demo1} width="400px" height="300px" alt='Output javascript code, in real time.' />
     </article>
     <article>
       <p>
         <span>Bundle app size</span>
         Super light application size. -5MB!
       </p>
-      <img src={demo2} alt='descripción de la imagen' />
+      <img src={demo2} width="400px" height="300px" alt='App size example (-5mb)' />
     </article>
     <article>
       <p>
