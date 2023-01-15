@@ -13,20 +13,30 @@ import Footer from './Footer.astro';
         <span>Workflow</span>
         Receive in real time, line by line the result of your code.
       </p>
-      <img src={demo1} width="400px" height="300px" alt='Output javascript code, in real time.' />
+      <img
+        src={demo1}
+        width='400px'
+        height='300px'
+        alt='Output JavaScript code, in real time.'
+      />
     </article>
     <article>
       <p>
         <span>Bundle app size</span>
         Super light application size. -5MB!
       </p>
-      <img src={demo2} width="400px" height="300px" alt='App size example (-5mb)' />
+      <img
+        src={demo2}
+        width='400px'
+        height='300px'
+        alt='App size example (-5mb)'
+      />
     </article>
     <article>
       <p>
         <span>It's 100% free!</span>
       </p>
-      <div>Totally free!</div>
+      <div class='free-text'>Totally free!</div>
     </article>
   </section>
   <Download />
@@ -68,7 +78,7 @@ import Footer from './Footer.astro';
     font-size: 2.4rem;
     font-weight: 800;
     letter-spacing: 4px;
-    border: 1px solid rgb(121, 155, 236);
+    border: 1px solid #F7DE3A;
     border-radius: 8px;
     padding: 4rem;
     display: inline-block;
@@ -76,14 +86,19 @@ import Footer from './Footer.astro';
 
   section {
     color: white;
-    max-width: 940px;
     margin: 0 auto;
     text-align: center;
-    background-color: #2c2d38
+    max-width: 940px;
+    background-color: #15202b;
   }
 
   main {
-    background-color: #2c2d38;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='315' height='37.8' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='8' stroke-opacity='0.40'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #15202b;
+  }
+
+  .free-text {
+    background: linear-gradient(to right, #fff, #F7DE3A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 </style>
