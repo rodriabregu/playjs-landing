@@ -1,3 +1,7 @@
+---
+import demo1 from '/demo1.png';
+---
+
 <header>
   <h1>
     <span
@@ -11,24 +15,31 @@
       PlayJS.
     </span>
   </h1>
+  <img src={demo1} height='290px' alt='App size example (-5mb)' />
 </header>
 
 <style>
   p {
-    color: #FFFDFA;
+    color: #fffdfa;
     font-size: 1.5rem;
     font-weight: 300;
     text-align: center;
   }
   header {
     background: linear-gradient(to bottom, #070606, #15202b);
-    display: grid;
+    display: flex;
+    flex-direction: row;
     place-content: center;
-    padding-bottom: 3rem;
+    padding: 4rem 0 4rem 0;
+    align-items: center;
+    gap: 2rem;
+  }
+  img {
+    object-fit: contain;
   }
   h1 {
     display: flex;
-    flex-direction: 'row';
+    flex-direction: column;
     gap: 1rem;
     font-size: 2rem;
     font-weight: 800;
@@ -37,7 +48,7 @@
     margin: 0 0 16px;
   }
   span {
-    color: #FFFDFA;
+    color: #fffdfa;
     display: block;
     font-size: 56px;
     line-height: 1.2;
@@ -50,7 +61,7 @@
     background: linear-gradient(90deg, var(--start-color), var(--end-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #FFFDFA;
+    color: #fffdfa;
     font-size: 56px;
     position: absolute;
     inset: 0;
@@ -89,7 +100,7 @@
   }
 
   @media (max-width: 860px) {
-    h1 {
+    header {
       flex-direction: column;
     }
   }
