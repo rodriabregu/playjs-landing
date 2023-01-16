@@ -1,52 +1,57 @@
+---
+import AppDemo from '/AppDemo.mp4';
+---
+
 <header>
   <h1>
     <span
-      style="--start-color:#007CF0; --end-color:#00DFD8; --content: 'Playground.';"
+      style="--start-color:#8030CA; --end-color:#FF0000; --content: 'JavaScript'; --animation:a2;"
     >
-      Playground.
+      JavaScript
     </span>
     <span
-      style="--start-color:#7928CA; --end-color:#FF0080; --content: 'Javascript.'; --animation:a2;"
+      style="--start-color:#FF5D5D; animation-name:a3; --end-color:#F9CB30; --content: 'PlayJS.'; --animation: a3"
     >
-      Javascript.
-    </span>
-    <span
-      style="--start-color:#FF4D4D; animation-name:a3; --end-color:#F9CB28; --content: 'Fast.'; --animation: a3"
-    >
-      Fast.
+      PlayJS.
     </span>
   </h1>
 
-  <p>
-    Quickly test your Javascript code ideas, with a real-time result. Totally
-    free!
-  </p>
+  <video src={AppDemo} autoplay loop muted></video>
 </header>
 
 <style>
   p {
-    color: #fff;
+    color: #fffdfa;
     font-size: 1.5rem;
     font-weight: 300;
     text-align: center;
   }
   header {
-    background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='3.8' stroke-opacity='0.3'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
-    display: grid;
+    background: linear-gradient(to bottom, #070606, #15202b);
+    display: flex;
+    flex-direction: row;
     place-content: center;
+    padding: 4rem 0 4rem 0;
+    align-items: center;
+    gap: 2rem;
+  }
+  img {
+    object-fit: contain;
   }
   h1 {
-    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
     font-weight: 800;
     letter-spacing: -0.06em;
     text-align: center;
     margin: 0 0 16px;
   }
   span {
-    color: #fff;
+    color: #fffdfa;
     display: block;
-    font-size: 100px;
+    font-size: 56px;
     line-height: 1.2;
     position: relative;
   }
@@ -57,25 +62,18 @@
     background: linear-gradient(90deg, var(--start-color), var(--end-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #fff;
-    font-size: 100px;
+    color: #fffdfa;
+    font-size: 56px;
     position: absolute;
     inset: 0;
     content: var(--content);
     opacity: 1;
   }
 
-  @keyframes a {
-    0%,
-    16.667%,
-    100% {
-      opacity: 1;
-    }
-
-    33.333%,
-    83.333% {
-      opacity: 0;
-    }
+  video {
+    border-radius: 8px;
+    max-width: 640px;
+    object-fit: contain;
   }
 
   @keyframes a2 {
@@ -105,6 +103,15 @@
     66.667%,
     83.333% {
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 940px) {
+    header {
+      flex-direction: column;
+    }
+    video {
+      max-width: 400px;
     }
   }
 </style>
