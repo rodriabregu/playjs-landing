@@ -4,16 +4,8 @@ import AppDemo from '/AppDemo.mp4';
 
 <header>
   <h1>
-    <span
-      style="--start-color:#8030CA; --end-color:#FF0000; --content: 'JavaScript'; --animation:a2;"
-    >
-      JavaScript
-    </span>
-    <span
-      style="--start-color:#FF5D5D; animation-name:a3; --end-color:#F9CB30; --content: 'PlayJS.'; --animation: a3"
-    >
-      PlayJS.
-    </span>
+    <span>JavaScript</span>
+    <span class='playjs'>PlayJS.</span>
   </h1>
 
   <video src={AppDemo} autoplay loop muted></video>
@@ -46,7 +38,6 @@ import AppDemo from '/AppDemo.mp4';
     font-weight: 800;
     letter-spacing: -0.06em;
     text-align: center;
-    margin: 0 0 16px;
   }
   span {
     color: #fffdfa;
@@ -55,20 +46,6 @@ import AppDemo from '/AppDemo.mp4';
     line-height: 1.2;
     position: relative;
   }
-  span::before {
-    animation-name: var(--animation, a);
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    background: linear-gradient(90deg, var(--start-color), var(--end-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fffdfa;
-    font-size: 56px;
-    position: absolute;
-    inset: 0;
-    content: var(--content);
-    opacity: 1;
-  }
 
   video {
     border-radius: 8px;
@@ -76,34 +53,13 @@ import AppDemo from '/AppDemo.mp4';
     object-fit: contain;
   }
 
-  @keyframes a2 {
-    0%,
-    100% {
-      opacity: 0;
-    }
-
-    33.333%,
-    50% {
-      opacity: 1;
-    }
-
-    16.667%,
-    66.667% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes a3 {
-    0%,
-    50%,
-    100% {
-      opacity: 0;
-    }
-
-    66.667%,
-    83.333% {
-      opacity: 1;
-    }
+  .playjs {
+    color: #fffdfa;
+    background-image: -webkit-linear-gradient(0deg, #fffdfa 42%, #c8f71b 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   @media (max-width: 940px) {
