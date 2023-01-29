@@ -8,7 +8,10 @@ import AppDemo from '/AppDemo.mp4';
     <span class='playjs'>PlayJS.</span>
   </h1>
 
-  <video src={AppDemo} autoplay loop muted></video>
+  <video width="640px" height="360px" autoplay loop muted>
+    <source src={AppDemo} type='video/mp4' />
+    Sorry, your browser doesn't support embedded videos.
+  </video>
 </header>
 
 <style>
@@ -55,7 +58,7 @@ import AppDemo from '/AppDemo.mp4';
 
   .playjs {
     color: #fffdfa;
-    background-image: -webkit-linear-gradient(0deg, #fffdfa 42%, #F7DE3A 70%);
+    background-image: -webkit-linear-gradient(0deg, #fffdfa 42%, #f7de3a 70%);
     background-clip: text;
     -webkit-background-clip: text;
     text-fill-color: transparent;
